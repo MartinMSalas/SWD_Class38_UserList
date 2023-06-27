@@ -17,14 +17,22 @@ function UserList() {
 
   return (
     <>
-      {data.length > 0 ? (
-        data.map((item) => {
-          return <div key={item.id}><User name={item.name}></User></div>;
-        })
-      ) : (
-        <h1>LOADING LOADING LOADING LOADING LOADING LOADING LOADING LOADING LOADING LOADING LOADING LOADING LOADING LOADING </h1>
-        
-      )}
+      <ul>
+        {data.length > 0 ? (
+          data.map((item) => {
+            return (
+              
+                <User key={item.id} name={item.name}></User>
+              
+            );
+          })
+        ) : (
+          <h1>
+            LOADING LOADING LOADING LOADING LOADING LOADING LOADING LOADING
+            LOADING LOADING LOADING LOADING LOADING LOADING{" "}
+          </h1>
+        )}
+      </ul>
     </>
   );
 }
